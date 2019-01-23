@@ -10,28 +10,38 @@
 
 
 
-var phonePrice = 6000;
-var bankBalance = prompt('enter your bank balance');
-number= Number(bankBalance);
-// console.log(typeof bankBalance);
-// console.log(typeof number);
-if(isNaN(number)===true){
-    var bankBalance = prompt('that is not a number.please enter a number');
-    if(bankBalance >= phonePrice){
-        alert('you can buy the phone');
-    }
-    else{
-        alert('you cannot buy the phone');
-    }
-}
+// var phonePrice = 6000;
+// var bankBalance = prompt('enter your bank balance');
+// number= Number(bankBalance);
 
+// if(isNaN(number)===true){
+//     var bankBalance = prompt('that is not a number.please enter a number');
+//     if(bankBalance >= phonePrice){
+//         alert('you can buy the phone');
+//     }
+//     else{
+//         alert('you cannot buy the phone');
+//     }
+// }
+
+// else{
+//     if(bankBalance >= phonePrice){
+//         alert('you can buy the phone');
+//     }
+//     else{
+//         alert('you cannot buy the phone');
+//     } 
+// }
+
+
+var firstName = prompt('enter first name');
+var lastName = prompt('enter last name');
+var age = prompt('enter the age');
+var gender  = prompt('enter the gender');
+if (gender == 'male'){
+    alert(firstName + ' ' + lastName + ' ' + 'is a male of age' + ' '+ age);
+}
 else{
-    if(bankBalance >= phonePrice){
-        alert('you can buy the phone');
-    }
-    else{
-        alert('you cannot buy the phone');
-    }
-    
+    alert(firstName + ' ' + lastName + ' ' + 'is a female of age' + ' '+ age);
 }
 
