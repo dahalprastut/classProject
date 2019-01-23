@@ -32,6 +32,6 @@ else{
     else{
         alert('you cannot buy the phone');
     }
-    sadfasdf
+    
 }
 
