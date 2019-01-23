@@ -34,14 +34,30 @@
 // }
 
 
+// var firstName = prompt('enter first name');
+// var lastName = prompt('enter last name');
+// var age = prompt('enter the age');
+// var gender  = prompt('enter the gender');
+// if (gender == 'male'){
+//     alert(firstName + ' ' + lastName + ' ' + 'is a male of age' + ' '+ age);
+// }
+// else{
+//     alert(firstName + ' ' + lastName + ' ' + 'is a female of age' + ' '+ age);
+// }
+
+
 var firstName = prompt('enter first name');
 var lastName = prompt('enter last name');
 var age = prompt('enter the age');
 var gender  = prompt('enter the gender');
-if (gender == 'male'){
-    alert(firstName + ' ' + lastName + ' ' + 'is a male of age' + ' '+ age);
+if(age >= 18 && gender=='female'){
+    alert('eligible for all female college scholarship');
 }
-else{
-    alert(firstName + ' ' + lastName + ' ' + 'is a female of age' + ' '+ age);
+else if(age < 18 && gender=='female'){
+    alert('eligible for girls school scholarship');
 }
+else if(age < 18 && gender=='male'){
+    alert('not eligible scholarship');
+}
+
 
