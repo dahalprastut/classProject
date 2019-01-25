@@ -128,48 +128,131 @@
 
 // impi
 
-function getMonth(input){
-    var months = ['january' , 'february' , 'march' , 'april' , 'may' , 'june' , 'july' , 'august' , 'september' , 'october' , 'november' , 'december'];
+// function getMonth(input){
+//     var months = ['january' , 'february' , 'march' , 'april' , 'may' , 'june' , 'july' , 'august' , 'september' , 'october' , 'november' , 'december'];
     
-    return arrayPosition(months , input);
+//     return arrayPosition(months , input);
     
-}   
+// }   
 
-function arrayPosition(months , input){
-    if(input > months.length){
-        return ;
+// function arrayPosition(months , input){
+//     if(input > months.length){
+//         return ;
       
-      }
-      return months[input - 1];
+//       }
+//       return months[input - 1];
+// }
+
+
+
+// function common(a){
+//     if(getMonth(a)){
+//         alert(`the ${a} month is ${getMonth(a)}`);
+//     } else {
+//         alert('this is false please enter correct number');
+//     }
+// }
+
+// var firstInput = prompt('enter the month number');
+// common(firstInput);
+
+// var names =['hari' , 'shyam' , 'ravi'];
+// nameCommon(firstInput);
+// function nameCommon(b){
+//     if(names[b]){
+//         alert(`name is ${names[b-1]}`);
+//     }else{
+//         alert(`there is no name in this postition`);
+//     }
+// }
+
+
+
+// var secondInput = prompt(`enter the second number`);
+// common(secondInput);
+
+
+
+// function sum(a,b){
+//     var add=a+b;
+//     return add;
+// }
+
+// function calcPercentage(a , b , c , d , e) { 
+//     var total=a + b + c + d + e;
+//     var percentage = parseFloat(total/0.5);
+//     alert(percentage);
+//     return sum(a,b);
+    
+// }
+
+// var prastutMarks = [78 , 970 , 98 , 89 , 69];
+// calcPercentage(prastutMarks[0],prastutMarks[1],prastutMarks[2],prastutMarks[3],prastutMarks[4]);
+
+
+
+
+
+// var sumOfNumbers = sum(prastutMarks[0],prastutMarks[1]);
+// if(sumOfNumbers < 200){
+//     alert('less than 200 ' + sumOfNumbers);
+// }
+// else{
+// alert('greater than 200' + sumOfNumbers);
+// }
+
+// var arr=[5,2,3];
+
+// function firstMultiple( arr){
+//     var product = arr[0]*arr[1];
+//     sum(arr[0],arr[1]);
+//     return product;
+
+// }
+
+// function sum(a,b){
+//     var add=a+b;
+//     console.log (add);
+// }
+
+// alert(firstMultiple(arr));
+
+
+function askInput(){
+    var input = prompt('enter how many numbers youo want the sum of');
+    numberInput=Number(input);
+    return numberInput;
 }
 
 
 
-function common(a){
-    if(getMonth(a)){
-        alert(`the ${a} month is ${getMonth(a)}`);
-    } else {
-        alert('this is false please enter correct number');
+
+function checkInput(){
+    var sum= 0;
+    if(isNaN(numberInput)==true){
+        alert('please enter a number');
+    }
+    else{
+        for(var i= 1 ; i <= numberInput ; i++){
+            var number=  Number(prompt(`enter ${i} number`));
+            while(isNaN(number)==true){
+                var number = Number(prompt(`it is not a number. enter ${i} number`));
+            }
+       
+                sum = sum + number;
+                
+        }
+        console.log(sum);
     }
 }
-
-var firstInput = prompt('enter the month number');
-common(firstInput);
-
-var names =['hari' , 'shyam' , 'ravi'];
-nameCommon(firstInput);
-function nameCommon(b){
-    if(names[b]){
-        alert(`name is ${names[b-1]}`);
-    }else{
-        alert(`there is no name in this postition`);
-    }
+function askInputOutput(){
+    askInput();
+    checkInput();
 }
 
+askInputOutput();
 
 
-var secondInput = prompt(`enter the second number`);
-common(secondInput);
 
 
 
